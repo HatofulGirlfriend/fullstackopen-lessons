@@ -1,25 +1,27 @@
-const Hello = (props) => {
-  console.log(props);
-  return (
-    <div>
-      <p>
-        Hello {props.name}, you are {props.age} years old
-      </p>
-    </div>
-  );
+const Hello = ({ name, age }) => {
+  const bornYear = () => new Date().getFullYear() - age
+
+return (
+  <div>
+    <p>
+      Hello {name}, you are {age} years old
+    </p>
+    <p>So you were probably born in {bornYear()}</p>
+  </div>
+)
+
 };
 
 const App = () => {
-  const friends = [
-    {name: "Miteux", age: 7},
-    {name: "Patrice", age: 240},
-  ]
+  const name = "Peter";
+  const age = 10;
 
   return (
-    <>
-   <p>{friends[0].name} {friends[0].age}</p>
-   <p>{friends[1].name} {friends[1].age}</p>
-    </>
+    <div>
+      <h1>Greetings</h1>
+      <Hello name="Miteux" age={5 + 2} />
+      <Hello name={name} age={age} /> 
+    </div>
   );
 };
 
