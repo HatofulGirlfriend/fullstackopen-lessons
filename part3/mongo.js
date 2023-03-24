@@ -9,7 +9,7 @@ const password = process.argv[2]
 
 const url = 
 `mongodb+srv://tonipatsias:${password}
-@cluster0.anziejr.mongodb.net/noteApp?retryWrites=true&w=majority`
+@phonebookdb.ly3qels.mongodb.net/noteApp?retryWrites=true&w=majority`
 
 
 
@@ -24,18 +24,18 @@ const noteSchema = new mongoose.Schema({
 const Note = mongoose.model("Note", noteSchema)
 
 const note = new Note({
-    content: "I am also a test",
-    important: false,
+    content: "Mongoose makes things easy",
+    important: true,
 })
 
-Note.find({ important: true }).then(result => {
-    result.forEach(note => {
-        console.log(note)
-    })
-    mongoose.connection.close()
-})
-
-// note.save().then(result => {
-//     console.log("note saved!")
+// Note.find({ important: true }).then(result => {
+//     result.forEach(note => {
+//         console.log(note)
+//     })
 //     mongoose.connection.close()
 // })
+
+note.save().then(result => {
+    console.log("note saved!")
+    mongoose.connection.close()
+})
