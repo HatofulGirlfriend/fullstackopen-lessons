@@ -18,8 +18,8 @@ test("reverse of releveler", () => {
   expect(result).toBe("releveler")
 })
 
-test("palindrome of react", () => {
-  const result = reverse("react")
+test("palindrome of nelen", () => {
+  const result = reverse("nelen")
 
-  expect(result).toBe("tkaer")
+  expect(result).toBe("nelen")
 })
