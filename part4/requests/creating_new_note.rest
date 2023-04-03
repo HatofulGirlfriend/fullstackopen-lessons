@@ -1,10 +1,12 @@
 POST http://localhost:3001/api/notes
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InBldGVybiIsImlkIjoiNjQyYTlhNzk4ZjAwN2U3MWFmNDI3YTNiIiwiaWF0IjoxNjgwNTEzNjg0fQ.jpWfsGknhD7L3wh8roTXR23bE3p-IJZpaKdAs9z8qI4
 
 {
-    "content": "I love pizza",
+    "content": "test testy test",
     "important": true
 }
+
 ###
 POST http://localhost:3001/api/notes
 Content-Type: application/json
